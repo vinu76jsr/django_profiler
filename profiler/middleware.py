@@ -42,4 +42,5 @@ class ProfileMiddleware(object):
                             info=info)
 
             response.content = render_to_string('profiler/profiler.html', ret_dict)
+            response['Content-Type'] = 'text/html'
         return response
